@@ -1,4 +1,4 @@
-onst userRoutes = (app, fs) => {
+const userRoutes = (app, fs) => {
 
     // variables
     const dataPath = './data/users.json';
