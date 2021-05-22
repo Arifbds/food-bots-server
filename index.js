@@ -5,9 +5,7 @@ const fs = require('fs-extra');
 require('dotenv').config();
 const app = express();
 
-const port1 = 3500
-const port2 = 4000
-
+const port = 4000
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -21,4 +19,4 @@ app.get('/', (req, res) => {
 });
 
 // Listener port
-app.listen(port1 || port2);
+app.listen(process.env.PORT || port);

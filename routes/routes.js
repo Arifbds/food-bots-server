@@ -5,7 +5,7 @@ const appRouter = (app, fs) => {
 
     // default route
     app.get('/', (req, res) => {
-        res.send('The Food bots server is running');
+        res.send('The Food Bots server is running');
     });
 
     // // other routes
