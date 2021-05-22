@@ -1,6 +1,6 @@
 const userRoutes = (app, fs) => {
 
-    // variables
+    // Json data path
     const dataPath = './data/users.json';
 
     // helper methods
@@ -25,18 +25,17 @@ const userRoutes = (app, fs) => {
         });
     };
 
-    // Rout For User Details
+    // Route For User Details
     app.get('/user', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
                 throw err;
             }
-
             res.send(JSON.parse(data));
         });
     });
 
-    // Rout For Order Details
+    // Route For Order Details
     app.get('/orders', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
